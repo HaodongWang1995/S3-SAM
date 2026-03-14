@@ -1,4 +1,4 @@
-import { APP_VERSION } from "@FetchGithubInfo/api/routers/index";
+import { APP_VERSION } from "@FetchGithubInfo/api/version";
 import { useQuery } from "@tanstack/react-query";
 import { createFileRoute } from "@tanstack/react-router";
 

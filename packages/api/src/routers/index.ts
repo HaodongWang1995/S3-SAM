@@ -1,10 +1,9 @@
 import type { RouterClient } from "@orpc/server";
 
 import { publicProcedure } from "../index";
+import { APP_VERSION } from "../version";
 import { githubRouter } from "./github";
 import { todoRouter } from "./todo";
-
-export const APP_VERSION = "0.0.0";
 
 export const appRouter = {
 	healthCheck: publicProcedure.handler(() => {
