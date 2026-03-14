@@ -1,0 +1,44 @@
+{
+  "name": "FetchGithubInfo",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "type": "module",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "check-types": "turbo check-types",
+    "dev:web": "turbo -F web dev",
+    "dev:server": "turbo -F server dev",
+    "db:push": "turbo -F @FetchGithubInfo/db db:push",
+    "db:studio": "turbo -F @FetchGithubInfo/db db:studio",
+    "db:generate": "turbo -F @FetchGithubInfo/db db:generate",
+    "db:migrate": "turbo -F @FetchGithubInfo/db db:migrate",
+    "check": "ultracite check",
+    "fix": "ultracite fix",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@FetchGithubInfo/env": "workspace:*",
+    "dotenv": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@FetchGithubInfo/config": "workspace:*",
+    "@biomejs/biome": "2.4.5",
+    "@types/node": "catalog:",
+    "husky": "latest",
+    "lint-staged": "latest",
+    "turbo": "^2.8.12",
+    "typescript": "^5",
+    "ultracite": "7.3.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,jsonc,css,scss,md,mdx}": [
+      "pnpm dlx ultracite fix"
+    ]
+  },
+  "packageManager": "pnpm@10.23.0"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "@FetchGithubInfo/api",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    },
+    "./*": {
+      "default": "./src/*.ts"
+    }
+  },
+  "scripts": {},
+  "dependencies": {
+    "@FetchGithubInfo/db": "workspace:*",
+    "@FetchGithubInfo/env": "workspace:*",
+    "@orpc/client": "catalog:",
+    "@orpc/openapi": "catalog:",
+    "@orpc/server": "catalog:",
+    "@orpc/zod": "catalog:",
+    "@types/pg": "catalog:",
+    "dotenv": "catalog:",
+    "drizzle-orm": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@FetchGithubInfo/config": "workspace:*",
+    "hono": "catalog:",
+    "typescript": "^5"
+  }
+}

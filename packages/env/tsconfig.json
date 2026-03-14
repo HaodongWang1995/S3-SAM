@@ -1,0 +1,6 @@
+{
+  "extends": "@FetchGithubInfo/config/tsconfig.base.json",
+  "compilerOptions": {
+    "strictNullChecks": true
+  }
+}
