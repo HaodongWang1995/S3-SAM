@@ -18,7 +18,10 @@
     "db:migrate": "turbo -F @FetchGithubInfo/db db:migrate",
     "check": "ultracite check",
     "fix": "ultracite fix",
-    "prepare": "husky"
+    "prepare": "husky",
+    "sam:build": "turbo -F server build && sam build",
+    "sam:deploy": "sam deploy --guided",
+    "sam:local": "turbo -F server build && sam local start-api"
   },
   "dependencies": {
     "@FetchGithubInfo/env": "workspace:*",
